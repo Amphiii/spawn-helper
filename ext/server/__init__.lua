@@ -1,5 +1,3 @@
-
-
 radius = 10
 start_pos = nil
 cur_pos = nil
@@ -38,9 +36,9 @@ NetEvents:Subscribe('SpawnPosGround', function(player, ground)
     ChatManager:SendMessage('Spawn Helper: F5 = good, F6 = bad, F7 to stop')
 end)
 
-NetEvents:Subscribe('SetRadius', function(player, radius)
+NetEvents:Subscribe('SetRadius', function(player, new_radius)
     -- Set the global radius
-    radius = 10
+    radius = new_radius
 end)
 
 NetEvents:Subscribe('Start', function(player)

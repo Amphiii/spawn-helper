@@ -2,16 +2,11 @@ function move_player(new_pos)
     NetEvents:Send('MovePlayer', new_pos)
 end
 
-Console:Register('MovePlayer', 'This command moves the player.', function(args)
-    move_player(Vec3(-147.380875, 57.972504, -175.352570))
-    if #args == 1 and args[1] == 'hello' then
-      return 'goodbye'
-    end
-end)
-
 Console:Register('Radius', 'Set the radius of possible spawn positions.', function(args)
     if #args == 1 then
         radius = tonumber(args[1])
+        print("Setting radius to " .. tostring(radius))
+        NetEvents:Send('SetRadius', radius)
     else
         print("Enter a single argument, a number in meters")
     end
