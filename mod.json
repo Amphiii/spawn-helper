@@ -1,0 +1,13 @@
+{
+	"Name": "Spawn Helper",
+	"Authors": ["Oswald"],
+	"Description": "Helper mod for creating spawn locations",
+	"URL": "",
+    "Tags": [],
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}
